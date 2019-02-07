@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         AppComponent appComponent=DaggerAppComponent.builder().appModule(new AppModule()).build();
         appComponent.Inject(this);
 
-        dataHelper.getDBName();
+        dataHelper.insertData("test");
 
     }
 }

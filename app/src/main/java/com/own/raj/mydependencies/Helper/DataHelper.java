@@ -1,13 +1,20 @@
 package com.own.raj.mydependencies.Helper;
 
+import javax.inject.Inject;
+
 public class DataHelper {
 
-    public void DataHelper(){
+    String dbName;
+    int version;
 
+    @Inject
+    public DataHelper(String dbName,int version){
+
+        this.dbName=dbName;
+        this.version=version;
     }
 
-    public String getDBName(){
+    public  void insertData(String value){
 
-        return "v19";
     }
 }

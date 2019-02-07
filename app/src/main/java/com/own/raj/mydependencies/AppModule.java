@@ -12,14 +12,16 @@ import dagger.Provides;
 public class AppModule {
 
     @Provides
-    public DataHelper getDataMember(){
-        return new DataHelper();
+    public String  getDBNameee(){
+        return "v19";
+    }
+
+    @Provides
+    public int  getDBVerrrr(){
+        return 19;
     }
 
 
 }
 
 
-//Step1 . Module(Class) -->Methods (@Privides)
-
-//step2 . Ijject
