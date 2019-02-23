@@ -25,6 +25,7 @@ public class DataHelper {
         Log.d("test",data+"");
     }
 
+
     public  void insertData(String value){
 
     }
