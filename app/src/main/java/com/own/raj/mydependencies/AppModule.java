@@ -12,13 +12,13 @@ import dagger.Provides;
 public class AppModule {
 
     @Provides
-    public String  getDBNameee(){
+    public String  getDBName(){
         return "v19";
     }
 
 
     @Provides
-    public int  getDBVerrrr(){
+    public int  getDBVer(){
         return 19;
     }
 

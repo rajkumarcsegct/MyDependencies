@@ -7,6 +7,10 @@ public class DataHelper {
     String dbName;
     int version;
 
+    public DataHelper(){
+
+    }
+
     @Inject
     public DataHelper(String dbName,int version){
 
