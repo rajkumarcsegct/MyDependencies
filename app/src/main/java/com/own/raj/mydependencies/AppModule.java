@@ -4,34 +4,32 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.own.raj.mydependencies.Helper.DataHelper;
+import com.own.raj.mydependencies.Helper.SharedPrefHelper;
 
 import java.util.ArrayList;
 
 import javax.inject.Named;
+import javax.inject.Singleton;
 
+import Scope.PerActivity;
 import dagger.Module;
 import dagger.Provides;
 
 @Module
 public class AppModule {
 
-    @Provides
-    public String  getDBNameee(){
-        return "v19";
+    Context context;
+    public AppModule(Context context){
+        this.context=context;
     }
 
     @Provides
-    public int  getDBVerrrr(){
-        return 19;
+    @Singleton
+    public SharedPrefHelper getSharedPrefHelper(){
+        return new SharedPrefHelper(context);
     }
 
-    @Provides
-    public ArrayList<Integer> getData(){
-        ArrayList<Integer> list=new ArrayList<>();
-        list.add(1);
-        list.add(2);
-        return list;
-    }
+
 
 }
 
