@@ -11,6 +11,7 @@ import dagger.Provides;
 @Module
 public class AppModule {
 
+    // It will instantiate and provides dataHelper object.
     @Provides
     public DataHelper getDataMember(){
         return new DataHelper();
@@ -20,6 +21,3 @@ public class AppModule {
 }
 
 
-//Step1 . Module(Class) -->Methods (@Privides)
-
-//step2 . Ijject

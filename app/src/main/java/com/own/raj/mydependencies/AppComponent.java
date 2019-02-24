@@ -7,5 +7,4 @@ public interface AppComponent {
 
     void Inject(MainActivity activity);
 
-    //DataMember dataMember();
 }

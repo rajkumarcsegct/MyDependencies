@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_myactivity);
 
 
+        // Initializing app component
         AppComponent appComponent=DaggerAppComponent.builder().appModule(new AppModule()).build();
         appComponent.Inject(this);
 
