@@ -23,6 +23,7 @@ public class AppModule {
     }
 
 
+    // THis module can provide the object of DataHelper as it provides the param needed for DBHelper.
 }
 
 
