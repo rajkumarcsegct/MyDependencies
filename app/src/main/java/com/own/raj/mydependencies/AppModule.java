@@ -23,6 +23,7 @@ public class AppModule {
         this.context=context;
     }
 
+    @Singleton
     @Provides
     public SharedPrefHelper getSharedPrefHelper(){
         return new SharedPrefHelper(context);
