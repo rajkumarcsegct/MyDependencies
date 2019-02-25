@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.own.raj.mydependencies.Helper.DataHelper;
 import com.own.raj.mydependencies.Helper.LoginHelper;
+import com.own.raj.mydependencies.Helper.SharedPrefHelper;
 
 import javax.inject.Inject;
 
@@ -18,6 +19,9 @@ public class LoginActivity extends AppCompatActivity {
 
     @Inject
     LoginHelper loginHelper;
+
+    /*@Inject
+    SharedPrefHelper sharedPrefHelper;*/
 
     Button button;
 
