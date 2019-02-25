@@ -35,7 +35,8 @@ public class LoginActivity extends AppCompatActivity {
 
         AppComponent appComponent=DaggerAppComponent.builder().appModule(new AppModule(this)).build();
 
-        loginComponent=DaggerLoginComponent.builder().appComponent(appComponent).build();
+        loginComponent=appComponent.plusLoginComponent();
+
         loginComponent.inject(this);
 
         loginHelper.isAuthenticateSuccess();
