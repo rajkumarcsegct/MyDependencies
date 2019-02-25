@@ -1,5 +1,6 @@
 package com.own.raj.mydependencies;
 
+import com.own.raj.mydependencies.Helper.DataHelper;
 import com.own.raj.mydependencies.Helper.LoginHelper;
 
 import javax.inject.Singleton;
@@ -15,5 +16,11 @@ public class LoginModule {
     @PerActivity
     public LoginHelper getLoginHelper(){
         return new LoginHelper();
+    }
+
+    @Provides
+    //@PerActivity
+    public DataHelper getDataHelper(){
+        return new DataHelper();
     }
 }

@@ -21,7 +21,10 @@ public class LoginActivity extends AppCompatActivity {
     LoginHelper loginHelper;
 
     @Inject
-    SharedPrefHelper sharedPrefHelper;
+    DataHelper dataHelper;
+
+   /* @Inject
+    SharedPrefHelper sharedPrefHelper;*/
 
     Button button;
 
@@ -33,10 +36,10 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_myactivity);
 
 
-        //AppComponent appComponent=DaggerAppComponent.builder().appModule(new AppModule(this)).build();
+       // AppComponent appComponent=DaggerAppComponent.builder().appModule(new AppModule(this)).build();
 
         //loginComponent=appComponent.plusLoginComponent();
-        loginComponent= DaggerLoginComponent.builder().appComponent()
+        loginComponent= DaggerLoginComponent.builder().loginModule(new LoginModule()).build();
         loginComponent.inject(this);
 
         loginHelper.isAuthenticateSuccess();

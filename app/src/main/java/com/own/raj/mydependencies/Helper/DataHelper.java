@@ -17,8 +17,7 @@ public class DataHelper {
     int version;
 
     Context context;
-    public DataHelper(Context context){
-     this.context=context;
+    public DataHelper(){
     }
 
     public  String getDate(){
