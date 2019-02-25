@@ -5,8 +5,7 @@ import javax.inject.Singleton;
 import dagger.Component;
 
 
-@Singleton
-@Component(modules = LoginModule.class)
+@Component(dependencies = AppComponent.class,modules = LoginModule.class)
 public interface LoginComponent {
     void inject(LoginActivity mainActivity);
 

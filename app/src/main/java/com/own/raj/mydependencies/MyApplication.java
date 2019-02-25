@@ -9,20 +9,20 @@ import javax.inject.Inject;
 public class MyApplication extends Application {
 
 
-    @Inject
-    SharedPrefHelper sharedPrefHelper;
+   /* @Inject
+    SharedPrefHelper sharedPrefHelper;*/
 
-    AppComponent appComponent;
+   // AppComponent appComponent;
 
     @Override
     public void onCreate() {
         super.onCreate();
 
-        AppComponent appComponent=DaggerAppComponent.builder().appModule(new AppModule(this)).build();
-        appComponent.Inject(this);
+        /* appComponent=DaggerAppComponent.builder().appModule(new AppModule(this)).build();
+        appComponent.Inject(this);*/
     }
 
-    public AppComponent getAppComponent(){
+    /*public AppComponent getAppComponent(){
         return appComponent;
-    }
+    }*/
 }

@@ -20,17 +20,23 @@ public class LoginActivity extends AppCompatActivity {
     @Inject
     LoginHelper loginHelper;
 
-    /*@Inject
-    SharedPrefHelper sharedPrefHelper;*/
+    @Inject
+    SharedPrefHelper sharedPrefHelper;
 
     Button button;
 
+    LoginComponent loginComponent;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_myactivity);
 
+
+        AppComponent appComponent=DaggerAppComponent.builder().appModule(new AppModule(this)).build();
+
+        loginComponent=DaggerLoginComponent.builder().appComponent(appComponent).build();
+        loginComponent.inject(this);
 
         loginHelper.isAuthenticateSuccess();
 
