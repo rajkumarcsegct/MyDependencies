@@ -33,6 +33,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_myactivity);
 
 
+
         AppComponent appComponent=DaggerAppComponent.builder().appModule(new AppModule(this)).build();
 
         loginComponent=appComponent.plusLoginComponent();
