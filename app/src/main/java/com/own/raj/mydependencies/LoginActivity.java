@@ -21,7 +21,7 @@ public class LoginActivity extends AppCompatActivity {
     LoginHelper loginHelper;
 
     @Inject
-    SharedPrefHelper sharedPrefHelper;
+    DataHelper dataHelper;
 
     Button button;
 
@@ -31,6 +31,8 @@ public class LoginActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_myactivity);
 
+        LoginComponent appComponent=DaggerLoginComponent.builder().loginModule(new LoginModule()).build();
+        appComponent.inject(this);
 
         loginHelper.isAuthenticateSuccess();
 

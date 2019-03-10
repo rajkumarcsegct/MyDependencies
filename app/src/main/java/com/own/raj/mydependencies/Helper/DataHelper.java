@@ -13,19 +13,12 @@ import javax.inject.Named;
 
 public class DataHelper {
 
-    String dbName;
-    int version;
 
-    Context context;
-    public DataHelper(Context context){
-     this.context=context;
+    public DataHelper(){
+
     }
 
-    public  String getDate(){
-        Calendar cal = Calendar.getInstance();
-
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss", Locale.ENGLISH);
-        return sdf.format(cal.getTime());
+    public void write(){
 
     }
 }
