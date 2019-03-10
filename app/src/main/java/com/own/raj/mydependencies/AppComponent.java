@@ -12,7 +12,6 @@ import dagger.Component;
 public interface AppComponent {
    // void Inject(MyApplication myApplication);
 
-
     SharedPrefHelper getSharedPrefHelper();
 
 }

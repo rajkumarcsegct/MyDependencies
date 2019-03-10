@@ -23,8 +23,8 @@ public class LoginActivity extends AppCompatActivity {
     @Inject
     DataHelper dataHelper;
 
-   /* @Inject
-    SharedPrefHelper sharedPrefHelper;*/
+    @Inject
+    SharedPrefHelper sharedPrefHelper;
 
     Button button;
 
