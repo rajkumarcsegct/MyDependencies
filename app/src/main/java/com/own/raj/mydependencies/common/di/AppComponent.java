@@ -1,7 +1,7 @@
-package com.own.raj.mydependencies;
+package com.own.raj.mydependencies.common.di;
 
 
-import com.own.raj.mydependencies.Helper.SharedPrefHelper;
+import com.own.raj.mydependencies.common.Helper.SharedPrefHelper;
 
 import javax.inject.Singleton;
 

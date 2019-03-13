@@ -1,10 +1,6 @@
-package com.own.raj.mydependencies;
+package com.own.raj.mydependencies.common;
 
 import android.app.Application;
-
-import com.own.raj.mydependencies.Helper.SharedPrefHelper;
-
-import javax.inject.Inject;
 
 public class MyApplication extends Application {
 

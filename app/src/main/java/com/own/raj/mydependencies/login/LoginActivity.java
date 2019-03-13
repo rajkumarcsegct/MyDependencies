@@ -1,17 +1,18 @@
-package com.own.raj.mydependencies;
+package com.own.raj.mydependencies.login;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
-import com.own.raj.mydependencies.Helper.DataHelper;
-import com.own.raj.mydependencies.Helper.LoginHelper;
-import com.own.raj.mydependencies.Helper.SharedPrefHelper;
+import com.own.raj.mydependencies.common.Helper.DataHelper;
+import com.own.raj.mydependencies.R;
+import com.own.raj.mydependencies.common.Helper.SharedPrefHelper;
+import com.own.raj.mydependencies.login.di.DaggerLoginComponent;
+import com.own.raj.mydependencies.login.di.LoginComponent;
+import com.own.raj.mydependencies.login.di.LoginModule;
 
 import javax.inject.Inject;
 
@@ -41,7 +42,6 @@ public class LoginActivity extends AppCompatActivity {
         //loginComponent=appComponent.plusLoginComponent();
         loginComponent= DaggerLoginComponent.builder().loginModule(new LoginModule()).build();
         loginComponent.inject(this);
-
         loginHelper.isAuthenticateSuccess();
 
         button=findViewById(R.id.button);
