@@ -16,16 +16,10 @@ import com.own.raj.mydependencies.login.di.LoginModule;
 
 import javax.inject.Inject;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity implements LoginContractor.LoginView {
 
     @Inject
-    LoginHelper loginHelper;
-
-    @Inject
-    DataHelper dataHelper;
-
-    @Inject
-    SharedPrefHelper sharedPrefHelper;
+    LoginPresenterImpl loginPresenter;
 
     Button button;
 
@@ -42,12 +36,14 @@ public class LoginActivity extends AppCompatActivity {
         //loginComponent=appComponent.plusLoginComponent();
         loginComponent= DaggerLoginComponent.builder().loginModule(new LoginModule()).build();
         loginComponent.inject(this);
-        loginHelper.isAuthenticateSuccess();
+        loginPresenter.setView(this);
+       // loginHelper.isAuthenticateSuccess();
 
         button=findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                loginPresenter.doAuthentication();
                // Toast.makeText(LoginActivity.this,dataHelper.getDate().toString(),Toast.LENGTH_LONG).show();
                // Log.d("test2",dataHelper.getDate());
             }
@@ -58,5 +54,16 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
+    }
+
+    @Override
+    public void showLoading() {
+
+    }
+
+    @Override
+    public void onAuthenticationCompleted(boolean isSuccess) {
+
+
     }
 }

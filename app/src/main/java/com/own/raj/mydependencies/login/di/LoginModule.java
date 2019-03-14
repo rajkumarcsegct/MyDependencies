@@ -1,7 +1,10 @@
 package com.own.raj.mydependencies.login.di;
 
 import com.own.raj.mydependencies.common.Helper.DataHelper;
+import com.own.raj.mydependencies.login.LoginContractor;
 import com.own.raj.mydependencies.login.LoginHelper;
+import com.own.raj.mydependencies.login.LoginInteractor;
+import com.own.raj.mydependencies.login.LoginPresenterImpl;
 
 import Scope.PerActivity;
 import dagger.Module;
@@ -11,14 +14,16 @@ import dagger.Provides;
 public class LoginModule {
 
     @Provides
-    @PerActivity
-    public LoginHelper getLoginHelper(){
+    public LoginInteractor getLoginInteractor(){
         return new LoginHelper();
     }
 
-    @Provides
-    //@PerActivity
-    public DataHelper getDataHelper(){
-        return new DataHelper();
-    }
+    /*@Provides
+    public LoginContractor.Presenter getLoginPresenter(LoginInteractor interactor){
+        return new LoginPresenterImpl(interactor);
+    }*/
+
+
+
+
 }
