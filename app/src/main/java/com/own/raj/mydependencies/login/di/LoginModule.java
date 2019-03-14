@@ -18,10 +18,10 @@ public class LoginModule {
         return new LoginHelper();
     }
 
-    /*@Provides
+    @Provides
     public LoginContractor.Presenter getLoginPresenter(LoginInteractor interactor){
         return new LoginPresenterImpl(interactor);
-    }*/
+    }
 
 
 

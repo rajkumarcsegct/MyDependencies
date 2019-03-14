@@ -11,9 +11,15 @@ public class LoginPresenterImpl implements LoginContractor.Presenter{
     LoginInteractor loginInteractor;
 
 
-    @Inject
     public LoginPresenterImpl(LoginInteractor interactor){
      this.loginInteractor=interactor;
+    }
+
+
+    @Override
+    public void setView(LoginContractor.LoginView view) {
+
+        this.view=view;
     }
 
     @Override
@@ -26,9 +32,4 @@ public class LoginPresenterImpl implements LoginContractor.Presenter{
         view.onAuthenticationCompleted(status);
     }
 
-    @Override
-    public void setView(LoginContractor.LoginView view) {
-
-       this.view=view;
-    }
 }

@@ -19,7 +19,7 @@ import javax.inject.Inject;
 public class LoginActivity extends AppCompatActivity implements LoginContractor.LoginView {
 
     @Inject
-    LoginPresenterImpl loginPresenter;
+    LoginContractor.Presenter loginPresenter;
 
     Button button;
 
@@ -59,11 +59,12 @@ public class LoginActivity extends AppCompatActivity implements LoginContractor.
     @Override
     public void showLoading() {
 
+        // show progress dialog
     }
 
     @Override
     public void onAuthenticationCompleted(boolean isSuccess) {
 
-
+        // Do activity based on the status
     }
 }
