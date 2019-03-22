@@ -24,7 +24,6 @@ public class AppModule {
     }
 
     @Provides
-    @Singleton
     public SharedPrefHelper getSharedPrefHelper(){
         return new SharedPrefHelper(context);
     }

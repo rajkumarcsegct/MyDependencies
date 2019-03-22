@@ -7,7 +7,6 @@ import dagger.Component;
 import dagger.Subcomponent;
 
 
-@PerActivity
 @Component(dependencies = AppComponent.class,modules = LoginModule.class)
 public interface LoginComponent {
     void inject(LoginActivity mainActivity);

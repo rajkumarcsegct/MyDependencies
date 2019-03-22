@@ -9,10 +9,7 @@ import javax.inject.Inject;
 public class MyApplication extends Application {
 
 
-   /* @Inject
-    SharedPrefHelper sharedPrefHelper;*/
 
-   // AppComponent appComponent;
 
     @Override
     public void onCreate() {
@@ -22,7 +19,5 @@ public class MyApplication extends Application {
         appComponent.Inject(this);*/
     }
 
-    /*public AppComponent getAppComponent(){
-        return appComponent;
-    }*/
+
 }

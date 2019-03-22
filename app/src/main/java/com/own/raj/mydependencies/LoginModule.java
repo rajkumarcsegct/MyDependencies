@@ -13,13 +13,11 @@ import dagger.Provides;
 public class LoginModule {
 
     @Provides
-    @PerActivity
     public LoginHelper getLoginHelper(){
         return new LoginHelper();
     }
 
     @Provides
-    //@PerActivity
     public DataHelper getDataHelper(){
         return new DataHelper();
     }
