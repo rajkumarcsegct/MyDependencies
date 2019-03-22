@@ -26,6 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     Button button;
 
     LoginComponent loginComponent;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +42,8 @@ public class LoginActivity extends AppCompatActivity {
         loginComponent.inject(this);
 
         loginHelper.isAuthenticateSuccess();
+
+        sharedPrefHelper.write("test","test");
 
         button=findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
