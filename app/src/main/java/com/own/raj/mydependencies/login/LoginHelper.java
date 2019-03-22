@@ -8,7 +8,7 @@ public class LoginHelper implements LoginInteractor {
     }
 
     @Override
-    public boolean doAthentication() {
+    public boolean attemptLogin() {
 
         return false;
     }

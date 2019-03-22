@@ -1,13 +1,10 @@
 package com.own.raj.mydependencies.login;
 
-
-import android.view.View;
-
 public interface LoginContractor {
 
     interface Presenter{
 
-        void doAuthentication();
+        void loginTapped();
 
         void setView(LoginView view);
 

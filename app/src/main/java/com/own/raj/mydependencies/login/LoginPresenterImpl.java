@@ -1,8 +1,5 @@
 package com.own.raj.mydependencies.login;
 
-import android.util.Log;
-import android.view.View;
-
 import javax.inject.Inject;
 
 public class LoginPresenterImpl implements LoginContractor.Presenter{
@@ -11,17 +8,16 @@ public class LoginPresenterImpl implements LoginContractor.Presenter{
     LoginInteractor loginInteractor;
 
 
-    @Inject
-    public LoginPresenterImpl(LoginInteractor interactor){
-     this.loginInteractor=interactor;
+    public LoginPresenterImpl(){
+     loginInteractor=new LoginHelper();
     }
 
     @Override
-    public void doAuthentication() {
+    public void loginTapped() {
         view.showLoading();
 
         // authentication code
-        boolean status=loginInteractor.doAthentication();
+        boolean status=loginInteractor.attemptLogin();
 
         view.onAuthenticationCompleted(status);
     }
