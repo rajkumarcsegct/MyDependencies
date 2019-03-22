@@ -35,14 +35,14 @@ public class LoginActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_myactivity);
 
-
-       // AppComponent appComponent=DaggerAppComponent.builder().appModule(new AppModule(this)).build();
-
-        //loginComponent=appComponent.plusLoginComponent();
         loginComponent= DaggerLoginComponent.builder().loginModule(new LoginModule()).build();
         loginComponent.inject(this);
 
         loginHelper.isAuthenticateSuccess();
+
+        sharedPrefHelper.write("test","test");
+
+
 
         button=findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
