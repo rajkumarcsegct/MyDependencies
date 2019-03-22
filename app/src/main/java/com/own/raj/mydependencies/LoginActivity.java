@@ -2,18 +2,16 @@ package com.own.raj.mydependencies;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.SupportActivity;
 import android.support.v7.app.AppCompatActivity;
-import android.webkit.JavascriptInterface;
 
-import com.own.raj.mydependencies.Helper.DataHelper;
+import com.own.raj.mydependencies.Helper.LoginHelper;
 
 import javax.inject.Inject;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     @Inject
-    DataHelper dataHelper;
+    LoginHelper dataHelper;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -23,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         // Initializing app component
-        AppComponent appComponent=DaggerAppComponent.builder().appModule(new AppModule()).build();
-        appComponent.Inject(this);
+        LoginComponent loginComponent = DaggerLoginComponent.builder().loginModule(new LoginModule()).build();
+        loginComponent.Inject(this);
 
         dataHelper.getDBName();
 

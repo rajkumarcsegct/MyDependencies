@@ -1,8 +1,8 @@
 package com.own.raj.mydependencies.Helper;
 
-public class DataHelper {
+public class LoginHelper {
 
-    public void DataHelper(){
+    public void LoginHelper(){
 
     }
 
