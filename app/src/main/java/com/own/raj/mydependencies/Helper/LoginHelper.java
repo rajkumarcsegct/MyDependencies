@@ -7,13 +7,13 @@ import java.util.ArrayList;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-public class DataHelper {
+public class LoginHelper {
 
     String dbName;
     int version;
 
     @Inject
-    public DataHelper(String dbName, int version){
+    public LoginHelper(String dbName, int version){
 
         this.dbName=dbName;
         this.version=version;
