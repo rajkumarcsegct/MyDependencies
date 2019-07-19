@@ -1,4 +1,4 @@
-package com.own.raj.mydependencies;
+package com.own.raj.mydependencies.login.di;
 
 import dagger.Module;
 import dagger.Provides;

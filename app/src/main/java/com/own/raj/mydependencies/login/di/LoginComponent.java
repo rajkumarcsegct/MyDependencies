@@ -1,4 +1,6 @@
-package com.own.raj.mydependencies;
+package com.own.raj.mydependencies.login.di;
+
+import com.own.raj.mydependencies.login.LoginActivity;
 
 import dagger.Component;
 
