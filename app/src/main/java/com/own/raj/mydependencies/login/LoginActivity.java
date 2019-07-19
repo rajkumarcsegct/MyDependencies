@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.own.raj.mydependencies.R;
 
@@ -44,12 +45,15 @@ public class LoginActivity extends AppCompatActivity implements LoginContractor.
 
     @Override
     public void showLoading() {
-
+    // Show alert dialog
     }
 
     @Override
     public void onAuthenticationCompleted(boolean isSuccess) {
 
+        if(isSuccess)
+            Toast.makeText(this,"Logged in Successfully",Toast.LENGTH_LONG).show();
+        else Toast.makeText(this,"Error in Authentication",Toast.LENGTH_LONG).show();
 
     }
 }
