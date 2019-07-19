@@ -1,7 +1,5 @@
 package com.own.raj.mydependencies.login;
 
-import javax.inject.Inject;
-
 public class LoginPresenterImpl implements LoginContractor.Presenter{
 
     LoginContractor.LoginView view;
@@ -9,7 +7,7 @@ public class LoginPresenterImpl implements LoginContractor.Presenter{
 
 
     public LoginPresenterImpl(){
-     loginInteractor=new LoginHelper();
+     loginInteractor=new LoginInteractorImpl();
     }
 
     @Override

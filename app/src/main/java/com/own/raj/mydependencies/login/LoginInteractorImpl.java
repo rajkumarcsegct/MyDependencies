@@ -1,6 +1,6 @@
 package com.own.raj.mydependencies.login;
 
-public class LoginHelper implements LoginInteractor {
+public class LoginInteractorImpl implements LoginInteractor {
 
     public boolean isAuthenticateSuccess(){
 
