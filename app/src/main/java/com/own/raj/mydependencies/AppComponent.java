@@ -1,9 +1,8 @@
 package com.own.raj.mydependencies;
 
 
-import com.own.raj.mydependencies.Helper.SharedPrefHelper;
-
-import javax.inject.Singleton;
+import com.own.raj.mydependencies.Common.DBUtil;
+import com.own.raj.mydependencies.Common.SharedPrefHelper;
 
 import dagger.Component;
 
@@ -12,6 +11,7 @@ public interface AppComponent {
    // void Inject(MyApplication myApplication);
 
 
-    SharedPrefHelper getSharedPrefHelper();
+    SharedPrefHelper provideSharedPrefHelper();
+    DBUtil provideDBUtil();
 
 }

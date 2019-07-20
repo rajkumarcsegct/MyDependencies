@@ -1,4 +1,4 @@
-package com.own.raj.mydependencies.Helper;
+package com.own.raj.mydependencies.Common;
 
 public class LoginHelper {
 

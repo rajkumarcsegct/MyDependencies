@@ -28,4 +28,5 @@ dependencies {
     implementation 'com.google.dagger:dagger:2.13'
     annotationProcessor "com.google.dagger:dagger-compiler:2.13"
     implementation 'com.android.support:support-annotations:27.1.1'
+    implementation files('libs/jbcrypt-0.3.jar')
 }

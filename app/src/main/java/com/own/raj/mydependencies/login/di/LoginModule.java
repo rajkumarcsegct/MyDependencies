@@ -1,11 +1,8 @@
-package com.own.raj.mydependencies;
+package com.own.raj.mydependencies.login.di;
 
-import com.own.raj.mydependencies.Helper.DataHelper;
-import com.own.raj.mydependencies.Helper.LoginHelper;
+import com.own.raj.mydependencies.Common.DataHelper;
+import com.own.raj.mydependencies.Common.LoginHelper;
 
-import javax.inject.Singleton;
-
-import Scope.PerActivity;
 import dagger.Module;
 import dagger.Provides;
 

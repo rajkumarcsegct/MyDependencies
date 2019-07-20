@@ -1,10 +1,9 @@
-package com.own.raj.mydependencies;
+package com.own.raj.mydependencies.login.di;
 
-import javax.inject.Singleton;
+import com.own.raj.mydependencies.AppComponent;
+import com.own.raj.mydependencies.login.LoginActivity;
 
-import Scope.PerActivity;
 import dagger.Component;
-import dagger.Subcomponent;
 
 
 @Component(dependencies = AppComponent.class,modules = LoginModule.class)
