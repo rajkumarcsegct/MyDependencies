@@ -18,7 +18,7 @@ public class LoginModule {
     }
 
 
-    // THis module can provide the object of LoginHelper as it provides the param needed for DBHelper.
+    // THis module can provide the object of LoginPresenter as it provides the param needed for LoginPresenter.
 }
 
 
