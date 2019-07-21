@@ -9,10 +9,10 @@ public class LoginInteractorImpl implements LoginInteractor {
 
 
     @Inject
-    private SharedPrefHelper sharedPrefHelper;
+    SharedPrefHelper sharedPrefHelper;
 
     @Inject
-    private DBUtil dbUtil;
+    DBUtil dbUtil;
 
     @Override
     public boolean attemptLogin() {

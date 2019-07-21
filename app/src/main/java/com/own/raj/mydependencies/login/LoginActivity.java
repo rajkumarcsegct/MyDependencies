@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity implements LoginContractor.
 
         //loginPresenter=new LoginPresenterImpl();
         LoginComponent appComponent= DaggerLoginComponent.builder().loginModule(new LoginModule()).build();
-        appComponent.Inject(this);
+        appComponent.inject(this);
         loginPresenter.setView(this);
 
         button=findViewById(R.id.button);
