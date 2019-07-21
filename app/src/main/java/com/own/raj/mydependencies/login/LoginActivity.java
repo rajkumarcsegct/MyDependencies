@@ -22,7 +22,7 @@ public class LoginActivity extends AppCompatActivity implements LoginContractor.
     LoginPresenterImpl loginPresenter;
 
     Button button;
-
+    LoginComponent appComponent;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +31,7 @@ public class LoginActivity extends AppCompatActivity implements LoginContractor.
 
 
         //loginPresenter=new LoginPresenterImpl();
-        LoginComponent appComponent= DaggerLoginComponent.builder().loginModule(new LoginModule()).build();
+        appComponent= DaggerLoginComponent.builder().loginModule(new LoginModule()).build();
         appComponent.Inject(this);
         loginPresenter.setView(this);
 
