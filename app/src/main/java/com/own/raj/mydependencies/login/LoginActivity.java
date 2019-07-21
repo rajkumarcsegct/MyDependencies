@@ -13,9 +13,12 @@ import com.own.raj.mydependencies.login.di.LoginModule;
 import com.own.raj.mydependencies.R;
 import com.own.raj.mydependencies.login.di.DaggerLoginComponent;
 
+import javax.inject.Inject;
+
 
 public class LoginActivity extends AppCompatActivity implements LoginContractor.LoginView {
 
+    @Inject
     LoginPresenterImpl loginPresenter;
 
     Button button;
