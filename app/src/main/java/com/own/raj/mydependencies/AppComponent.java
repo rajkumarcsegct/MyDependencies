@@ -1,15 +1,13 @@
 package com.own.raj.mydependencies;
 
 
-import com.own.raj.mydependencies.Helper.SharedPrefHelper;
-
-import javax.inject.Singleton;
+import com.own.raj.mydependencies.login.di.LoginComponent;
 
 import dagger.Component;
 
 @Component(modules = AppModule.class)
 public interface AppComponent {
-   // void Inject(MyApplication myApplication);
+    void inject(MyApplication myApplication);
 
     LoginComponent plusLoginComponent();
 

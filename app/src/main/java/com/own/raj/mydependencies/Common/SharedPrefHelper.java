@@ -1,12 +1,8 @@
-package com.own.raj.mydependencies.Helper;
+package com.own.raj.mydependencies.Common;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Locale;
 
 public class SharedPrefHelper {
 

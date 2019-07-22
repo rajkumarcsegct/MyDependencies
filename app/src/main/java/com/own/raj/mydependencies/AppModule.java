@@ -1,17 +1,10 @@
 package com.own.raj.mydependencies;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 
-import com.own.raj.mydependencies.Helper.DataHelper;
-import com.own.raj.mydependencies.Helper.SharedPrefHelper;
+import com.own.raj.mydependencies.Common.DBUtil;
+import com.own.raj.mydependencies.Common.SharedPrefHelper;
 
-import java.util.ArrayList;
-
-import javax.inject.Named;
-import javax.inject.Singleton;
-
-import Scope.PerActivity;
 import dagger.Module;
 import dagger.Provides;
 
@@ -28,7 +21,10 @@ public class AppModule {
         return new SharedPrefHelper(context);
     }
 
-
+    @Provides
+    public DBUtil provideDBUtil() {
+        return new DBUtil(context, "v19");
+    }
 
 }
 
