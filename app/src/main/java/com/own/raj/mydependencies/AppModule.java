@@ -5,6 +5,7 @@ import android.content.Context;
 import com.own.raj.mydependencies.Common.DBUtil;
 import com.own.raj.mydependencies.Common.SharedPrefHelper;
 
+import Scope.ApplicationScope;
 import dagger.Module;
 import dagger.Provides;
 
@@ -16,11 +17,13 @@ public class AppModule {
         this.context=context;
     }
 
+    @ApplicationScope
     @Provides
     public SharedPrefHelper getSharedPrefHelper(){
         return new SharedPrefHelper(context);
     }
 
+    @ApplicationScope
     @Provides
     public DBUtil provideDBUtil() {
         return new DBUtil(context, "v19");
