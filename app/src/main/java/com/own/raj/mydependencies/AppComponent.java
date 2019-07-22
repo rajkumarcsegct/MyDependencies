@@ -8,7 +8,7 @@ import dagger.Component;
 
 @Component(modules = AppModule.class)
 public interface AppComponent {
-   // void Inject(MyApplication myApplication);
+    void inject(MyApplication myApplication);
 
 
     SharedPrefHelper provideSharedPrefHelper();

@@ -1,13 +1,16 @@
 package com.own.raj.mydependencies.login;
 
+import javax.inject.Inject;
+
 public class LoginPresenterImpl implements LoginContractor.Presenter{
 
     LoginContractor.LoginView view;
-    LoginInteractor loginInteractor;
+    LoginInteractorImpl loginInteractor;
 
 
-    public LoginPresenterImpl(){
-     loginInteractor=new LoginInteractorImpl();
+    @Inject
+    public LoginPresenterImpl(LoginInteractorImpl loginInteractor){
+        this.loginInteractor=loginInteractor;
     }
 
     @Override

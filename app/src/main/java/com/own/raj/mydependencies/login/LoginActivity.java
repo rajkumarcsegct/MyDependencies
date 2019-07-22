@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.own.raj.mydependencies.MyApplication;
 import com.own.raj.mydependencies.R;
 import com.own.raj.mydependencies.login.di.DaggerLoginComponent;
 import com.own.raj.mydependencies.login.di.LoginComponent;
@@ -30,9 +31,14 @@ public class LoginActivity extends AppCompatActivity implements LoginContractor.
         setContentView(R.layout.activity_myactivity);
 
 
+
         //loginPresenter=new LoginPresenterImpl();
-        LoginComponent appComponent= DaggerLoginComponent.builder().loginModule(new LoginModule()).build();
+        LoginComponent appComponent= DaggerLoginComponent.builder()
+                .loginModule(new LoginModule())
+                .appComponent(((MyApplication)getApplication()).getAppComponent())
+                .build();
         appComponent.inject(this);
+
         loginPresenter.setView(this);
 
         button=findViewById(R.id.button);

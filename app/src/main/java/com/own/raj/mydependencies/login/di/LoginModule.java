@@ -2,6 +2,7 @@ package com.own.raj.mydependencies.login.di;
 
 import com.own.raj.mydependencies.Common.DataHelper;
 import com.own.raj.mydependencies.Common.LoginHelper;
+import com.own.raj.mydependencies.login.LoginInteractorImpl;
 import com.own.raj.mydependencies.login.LoginPresenterImpl;
 
 import dagger.Module;
@@ -10,9 +11,9 @@ import dagger.Provides;
 @Module
 public class LoginModule {
 
-    @Provides
-    public LoginPresenterImpl getLoginHelper(){
-        return new LoginPresenterImpl();
-    }
 
+    @Provides
+    public LoginPresenterImpl getLoginPresenter(LoginInteractorImpl loginInteractor){
+        return new LoginPresenterImpl(loginInteractor);
+    }
 }

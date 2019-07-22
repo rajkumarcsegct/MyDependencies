@@ -8,11 +8,15 @@ import javax.inject.Inject;
 public class LoginInteractorImpl implements LoginInteractor {
 
 
-    @Inject
     SharedPrefHelper sharedPrefHelper;
 
-    @Inject
     DBUtil dbUtil;
+
+    @Inject
+    public LoginInteractorImpl(SharedPrefHelper sharedPrefHelper,DBUtil dbUtil){
+        this.sharedPrefHelper=sharedPrefHelper;
+        this.dbUtil=dbUtil;
+    }
 
     @Override
     public boolean attemptLogin() {

@@ -22,7 +22,7 @@ public class AppModule {
     }
 
     @Provides
-    protected DBUtil provideDBUtil() {
+    public DBUtil provideDBUtil() {
         return new DBUtil(context, "v19");
     }
 
