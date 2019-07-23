@@ -2,6 +2,7 @@ package com.own.raj.mydependencies.login.di;
 
 import com.own.raj.mydependencies.login.LoginInteractorImpl;
 import com.own.raj.mydependencies.login.LoginPresenterImpl;
+import com.own.raj.mydependencies.qualifier.DBName;
 
 import dagger.Module;
 import dagger.Provides;
@@ -10,10 +11,15 @@ import dagger.Provides;
 public class LoginModule {
 
     @Provides
+    @DBName
     public String  getDBName(){
         return "v19";
     }
 
+    @Provides
+    public String  getUserName(){
+        return "raj";
+    }
 
     @Provides
     public int  getDBVer(){
