@@ -27,6 +27,9 @@ public class LoginActivity extends AppCompatActivity implements LoginContractor.
         loginPresenter=new LoginPresenterImpl();
         loginPresenter.setView(this);
 
+        // We are depending on ClassB(LoginPresenter), but it depends on some other values or objects, so the loops goes on..
+      //  loginPresenter=new LoginPresenterImpl(Param1,param2,Param3);
+
         button=findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
