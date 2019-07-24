@@ -9,7 +9,7 @@ import dagger.Provides;
 @Module
 public class LoginModule {
 
-    // It will instantiate and provides dataHelper object.
+    // It will instantiate and provides LoginPresenterImpl object.
     @Provides
     public LoginPresenterImpl getLoginPresenter(){
         return new LoginPresenterImpl();

@@ -5,7 +5,6 @@ public interface LoginContractor {
     interface Presenter{
 
         void setView(LoginView view);
-
         void loginTapped();
 
     }
